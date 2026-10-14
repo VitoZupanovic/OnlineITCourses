@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logs - Online IT Courses</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h2>Online IT Courses - Logs</h2>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </nav>
+
+    <div class="page-container">
+        <h1>System Logs</h1>
+
+        <div id="errorMessage" class="error-message"></div>
+
+        <label for="logCount">Number of logs:</label>
+        <select id="logCount" onchange="loadLogs()">
+            <option value="10">Last 10</option>
+            <option value="25">Last 25</option>
+            <option value="50">Last 50</option>
+        </select>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Timestamp</th>
+                    <th>Level</th>
+                    <th>Message</th>
+                    <th>Error Text</th>
+                </tr>
+            </thead>
+            <tbody id="logsTableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/logs.js"></script>
+</body>
+</html>
